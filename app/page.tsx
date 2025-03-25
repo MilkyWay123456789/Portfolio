@@ -1,23 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import { FaCode, FaDatabase, FaLaptopCode, FaClipboardList } from "react-icons/fa";
-const projects = [
-  {
-    title: "API Quản Lý Bệnh Nhân",
-    description: "API hỗ trợ đăng ký, nhập viện, xuất viện bệnh nhân.",
-    tech: "ASP.NET Core, Oracle, JWT, Swagger",
-  },
-  {
-    title: "Ứng Dụng Quản Lý Kho",
-    description: "Winform App hỗ trợ nhập xuất kho, kiểm kê hàng hóa.",
-    tech: "C#, VB.NET, SQL Server, Export PDF/Excel",
-  },
-  {
-    title: "API Quản Lý Voucher & Thẻ Thành Viên",
-    description: "API giúp tạo & quản lý voucher giảm giá, nâng cấp thẻ thành viên.",
-    tech: "ASP.NET Core, Entity Framework, RESTful API",
-  },
-];
+import { FaLaptopCode, FaDatabase, FaProjectDiagram, FaCode, FaShieldAlt, FaClipboardList, FaUsers, FaServer ,FaBuilding , FaTasks } from "react-icons/fa";
 export default function Home() {
   return (
     <div className="flex flex-col flex-1 pl-16">
@@ -35,10 +18,11 @@ export default function Home() {
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-          className="text-lg text-gray-200 mt-3 px-4 py-2 border-l-4 border-blue-400 bg-gray-800/50 rounded-md shadow-md"
+          className="text-lg text-gray-200 mt-3 inline-flex w-fit px-2 py-1 border-2 border-blue-400 rounded-md shadow-md bg-gray-800/50"
         >
           🚀 Backend Developer with over 2 years of experience
         </motion.p>
+        
       </div>
 
       {/* About Me */}
@@ -150,27 +134,316 @@ export default function Home() {
           viewport={{ once: false, amount: 0.2 }}
           className="mt-4 grid grid-cols-2 gap-4 text-gray-300"
         >
-          <li className="p-2 bg-gray-800 rounded-lg shadow-md border border-gray-700">✔ ASP.NET Core, Entity Framework, LINQ</li>
+          <li className="p-2 bg-gray-800 rounded-lg shadow-md border border-gray-700">✔ ASP.NET Core, Entity Framework, LINQ, T-SQL</li>
           <li className="p-2 bg-gray-800 rounded-lg shadow-md border border-gray-700">✔ Oracle, SQL Server, MySQL</li>
           <li className="p-2 bg-gray-800 rounded-lg shadow-md border border-gray-700">✔ RESTful API, JWT, SwaggerUI</li>
           <li className="p-2 bg-gray-800 rounded-lg shadow-md border border-gray-700">✔ C#, VB.NET</li>
         </motion.ul>
       </motion.div>
-
+      <motion.h1 
+              initial={{ opacity: 0, x: -20 }} 
+              transition={{ duration: 0.8 }}
+              whileInView={{ opacity: 1, y: 0 }} 
+              viewport={{ once: false, amount: 0.2 }}
+              className="text-4xl font-extrabold pb-2 mb-4"
+            >
+      </motion.h1>
       {/* Projects */}
-      <div className="text-white p-8">
-        <h1 className="text-3xl font-bold">My Projects</h1>
-        <div className="mt-6">
-          {projects.map((project, index) => (
-            <div key={index} className="p-4 rounded-md mb-4">
-              <h2 className="text-xl font-bold">{project.title}</h2>
-              <p className="mt-2">{project.description}</p>
-              <p className="text-blue-400 mt-1">{project.tech}</p>
-            </div>
-          ))}
-        </div>
+          <div className="relative bg-gradient-to-b from-[#0f172a] to-[#1e293b] p-10 rounded-xl shadow-lg">
+              <motion.h1 
+              initial={{ opacity: 0, x: -20 }} 
+              transition={{ duration: 0.8 }}
+              whileInView={{ opacity: 1, y: 0 }} 
+              viewport={{ once: false, amount: 0.2 }}
+              className="text-4xl font-extrabold text-blue-400 border-b-4 border-blue-500 pb-2 mb-4"
+              id="projects"
+            >
+              Projects
+            </motion.h1>
+
+            {/* Tiêu đề project 315HealthCare*/}
+                <motion.h2
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8 }}
+                  className="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600 flex items-center gap-3"
+                >
+                  <FaLaptopCode className="text-6xl text-blue-500" />
+                  Back End Developer
+                </motion.h2>
+
+                {/* Thông tin chi tiết */}
+                <motion.p
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.8, delay: 0.3 }}
+                  className="text-lg text-gray-300 mt-4 border-l-4 border-blue-500 pl-4 bg-gray-800 p-3 rounded-md shadow-md"
+                >
+                  <FaUsers className="text-yellow-400 text-xl" />
+                  Nhi Dong 315 | 2024 - Present | Ho Chi Minh City, Vietnam
+                </motion.p>
+
+                {/* Mô tả hệ thống */}
+                <motion.p
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.5 }}
+                  className="mt-4 text-gray-400 text-lg leading-relaxed"
+                > 
+                  The 315 Healthcare System provides medical services across various specialties, including Pediatrics, Obstetrics, Geriatrics, and Ophthalmology.
+                </motion.p>
+
+                {/* Tên dự án */}
+                <motion.h3
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.6 }}
+                  className="text-2xl font-bold text-yellow-400 mt-6"
+                > <FaServer className="text-green-400" />
+                  Project: 315Healthcare
+                </motion.h3>
+
+                <p className="text-gray-300 text-md mb-4">
+                  <span className="font-semibold">Team Size:</span> 13
+                </p>
+
+                {/* Danh sách tính năng */}
+                {[
+                  {
+                    title: "System Architecture & Development",
+                    icon: <FaProjectDiagram className="text-yellow-400" />,
+                    items: [
+                      "Designed and developed the entire system architecture for healthcare management, warehouse operations, and HRM.",
+                      "Implemented a scalable and modular architecture for future expansion."
+                    ]
+                  },
+                  {
+                    title: "Database Design & Optimization",
+                    icon: <FaDatabase className="text-red-400" />,
+                    items: [
+                      "Structured and optimized Oracle databases, ensuring efficient data storage and retrieval.",
+                      "Developed complex PL/SQL stored procedures, functions, and triggers.",
+                      "Improved query performance and indexing strategies."
+                    ]
+                  },
+                  {
+                    title: "Feature Development",
+                    icon: <FaCode className="text-green-400" />,
+                    items: [
+                      "Built patient registration and appointment scheduling systems with real-time status tracking.",
+                      "Developed medical examination and diagnosis modules.",
+                      "Designed inventory and warehouse management systems.",
+                      "Implemented payroll processing and salary calculation.",
+                      "Created billing and invoicing functionalities with integrated insurance."
+                    ]
+                  },
+                  {
+                    title: "Security & Compliance",
+                    icon: <FaShieldAlt className="text-purple-400" />,
+                    items: [
+                      "Implemented authentication and authorization mechanisms using JWT and RBAC.",
+                      "Enforced data encryption to protect sensitive patient records.",
+                      "Designed audit logging to track system usage."
+                    ]
+                  }
+                ].map((section, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: index * 0.2 }}
+                    className="mt-6"
+                  >
+                    <h3 className="text-xl font-bold text-blue-400 flex items-center gap-2">
+                      {section.icon} {section.title}:
+                    </h3>
+                    <ul className="list-disc pl-6 text-gray-300 space-y-2 mt-2">
+                      {section.items.map((item, idx) => (
+                        <li key={idx} className="text-md">{item}</li>
+                      ))}
+                    </ul>
+                  </motion.div>
+                ))}
+
+                {/* Công nghệ sử dụng */}
+                <motion.h3
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.8 }}
+                  className="text-xl font-bold text-blue-400 mt-6"
+                >
+                  Technologies Used:
+                </motion.h3>
+
+                {[
+                  {
+                    title: "Programming Languages & Frameworks",
+                    content: "C#, .NET Framework/.NET Core – Developed backend APIs and business logic.",
+                    icon: <FaLaptopCode className="text-blue-400 text-xl" />
+                  },
+                  {
+                    title: "Database & Data Management",
+                    content: "Oracle Database, PL/SQL – Designed schema, stored procedures, triggers, and optimized queries.",
+                    icon: <FaDatabase className="text-blue-400 text-xl" />
+                  },
+                  {
+                    title: "API & Integration",
+                    content: "RESTful APIs, JSON – Developed secure and scalable API endpoints.",
+                    icon: <FaCode className="text-blue-400 text-xl" />,
+                  },
+                  {
+                    title: "Security & Performance",
+                    content: "JWT Authentication, Role-Based Access Control (RBAC), Data Encryption.",
+                    icon: <FaShieldAlt className="text-blue-400 text-xl" />
+                  },
+                  {
+                    title: "Real-time Communication",
+                    content: "WebSocket – Implemented real-time data synchronization and event-driven updates.",
+                    icon: <FaServer className="text-blue-400 text-xl" />
+                  }
+                ].map((tech, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 1 + index * 0.2 }}
+                    className="mt-4 flex items-center gap-2"
+                  >
+                    {tech.icon}
+                    <div>
+                      <h4 className="text-md font-semibold text-gray-200">{tech.title}:</h4>
+                      <p className="text-gray-300 text-sm">{tech.content}</p>
+                    </div>
+                  </motion.div>
+                ))}
+
+              {/* Khoảng cách giữa 2 project*/}
+              <motion.h1 
+              initial={{ opacity: 0, x: -20 }} 
+              transition={{ duration: 0.8 }}
+              whileInView={{ opacity: 1, y: 0 }} 
+              viewport={{ once: false, amount: 0.2 }}
+              className="text-4xl font-extrabold text-blue-400 border-b-4 border-blue-500 pb-2 mb-4"
+            >
+            </motion.h1>
+
+            {/* Tiêu đề project RSE */}
+            <motion.h2
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-4xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-blue-600 flex items-center gap-3"
+            >
+              <FaLaptopCode className="text-5xl text-neonBlue" />
+              Developer
+            </motion.h2>
+
+            {/* Thông tin công ty */}
+            <motion.p
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="text-lg text-gray-300 mt-3 border-l-4 border-blue-500 pl-4 bg-white/5 p-2 rounded-md shadow-md backdrop-blur-md inline-block"
+            >
+              <FaBuilding className="inline-block mr-2 text-blue-500" />
+              Fujinet JSC | 02/2023 - 04/2025 | Ho Chi Minh City, Vietnam
+            </motion.p>
+
+            {/* Mô tả dự án */}
+            <motion.h3
+              initial={{ opacity: 0, y: -10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              className="text-xl font-bold text-yellow-400 mt-6"
+            >
+              <FaProjectDiagram className="inline-block mr-2 text-yellow-400" />
+              Project: RSE
+            </motion.h3>
+
+            <p className="text-gray-300 text-sm mb-3">
+              Team Size: <span className="font-semibold">8</span>
+            </p>
+
+            {/* Danh sách công việc */}
+            <div className="space-y-6">
+              {[ 
+                {
+                  title: "Designed and Developed WinForm Interfaces",
+                  tasks: [
+                    "Created intuitive user interfaces for warehouse management software.",
+                    "Implemented key features such as inventory entry, outbound processing, and reporting.",
+                  ],
+                },
+                {
+                  title: "Coding, Testing, and Reviewing",
+                  tasks: [
+                    "Developed core warehouse management features, ensuring system reliability.",
+                    "Conducted thorough code reviews to optimize performance.",
+                    "Performed UAT and created test cases for functionality validation.",
+                  ],
+                },
+                {
+                  title: "Report Design and Export",
+                  tasks: [
+                    "Designed visually intuitive report templates.",
+                    "Implemented PDF & Excel export functionality.",
+                    "Integrated direct printing support for warehouse operations.",
+                  ],
+                },
+              ].map(({ title, tasks }, index) => (
+                <motion.div
+                  key={title}
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.2 }}
+                >
+                  <h3 className="text-lg font-bold text-blue-300">
+                    <FaTasks className="inline-block mr-2" />
+                    {title}:
+                  </h3>
+                  <ul className="list-disc pl-6 text-gray-300 space-y-2">
+                    {tasks.map((task) => (
+                      <li key={task}>{task}</li>
+                    ))}
+                  </ul>
+                </motion.div>
+              ))}
+
+              {/* Công nghệ sử dụng */}
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.6 }}
+              >
+                <h3 className="text-lg font-bold text-blue-300">
+                  Technologies Used:
+                </h3>
+
+                <div className="mt-2 space-y-2">
+                  <div>
+                    <h4 className="text-md font-semibold text-gray-200">
+                      <FaCode className="inline-block mr-2 text-gray-200" />
+                      Programming Languages & Frameworks:
+                    </h4>
+                    <p className="text-gray-300 text-sm">
+                      Visual Basic, .NET Framework/.NET Core – Developed WinForm and business logic.
+                    </p>
+                  </div>
+
+                  <div>
+                    <h4 className="text-md font-semibold text-gray-200">
+                      <FaDatabase className="inline-block mr-2 text-gray-200" />
+                      Database & Data Management:
+                    </h4>
+                    <p className="text-gray-300 text-sm">
+                      Oracle Database, PL/SQL – Designed schema, stored procedures, and optimized queries.
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+              </div>
+          </div>
       </div>
-    </div>
   );
 }
 
