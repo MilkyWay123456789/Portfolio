@@ -1,4 +1,7 @@
 @import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
   --background: #ffffff;
@@ -20,7 +23,42 @@
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: url('/background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #cfd8dc;
 }
+
+h1 {
+  color: #ededed; /* Màu xanh sáng */
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+h2, h3 {
+  color: #ffb300; /* Màu vàng dịu */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+p, li {
+  color: #b0bec5; /* Màu xám xanh nhẹ */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.card {
+  background-color: rgba(0, 0, 0, 0.7); /* Nền trong suốt nhẹ để dễ nhìn hơn */
+  padding: 15px;
+  border-radius: 10px;
+}
+
+a {
+  color: #ededed; /* Link có màu xanh nhạt */
+}
+
+a:hover {
+  color: #00bcd4;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
