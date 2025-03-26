@@ -51,7 +51,8 @@ export default function Home() {
           viewport={{ once: false, amount: 0.2 }}
           className="mt-4 text-lg text-gray-300 leading-relaxed"
         >
-          I am a backend developer with over two years of experience in software development, specializing in building and optimizing web applications. With strong communication skills and a quick learning ability, I am always eager to adapt to new technologies and improve my expertise.
+          I am a backend developer with over two years of experience in software development, specializing in building and optimizing web applications. With strong communication skills and a fast learning ability, I thrive in dynamic environments and continuously seek to expand my technical expertise by adapting to new technologies.
+          My career goal is to become a highly skilled backend architect, focusing on designing scalable, high-performance systems. I am eager to contribute to innovative projects, enhance my expertise in cloud computing and distributed systems, and take on leadership roles in software development teams.
         </motion.p>
       
         {/* Skills & Expertise */}
@@ -305,7 +306,7 @@ export default function Home() {
                   <motion.div
                     key={index}
                     initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
+                    whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 1 + index * 0.2 }}
                     className="mt-4 flex items-center gap-2"
                   >
