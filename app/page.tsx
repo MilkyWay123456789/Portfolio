@@ -175,7 +175,7 @@ export default function Home() {
                 {/* Thông tin chi tiết */}
                 <motion.p
                   initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
+                  whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.8, delay: 0.3 }}
                   className="text-lg text-gray-300 mt-4 border-l-4 border-blue-500 pl-4 bg-gray-800 p-3 rounded-md shadow-md"
                 >
@@ -196,7 +196,7 @@ export default function Home() {
                 {/* Tên dự án */}
                 <motion.h3
                   initial={{ opacity: 0, y: -10 }}
-                  animate={{ opacity: 1, y: 0 }}
+                  whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.8, delay: 0.6 }}
                   className="text-2xl font-bold text-yellow-400 mt-6"
                 > <FaServer className="text-green-400" />
@@ -250,7 +250,7 @@ export default function Home() {
                   <motion.div
                     key={index}
                     initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
+                    whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8, delay: index * 0.2 }}
                     className="mt-6"
                   >
@@ -268,7 +268,7 @@ export default function Home() {
                 {/* Công nghệ sử dụng */}
                 <motion.h3
                   initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
+                  whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.8, delay: 0.8 }}
                   className="text-xl font-bold text-blue-400 mt-6"
                 >
