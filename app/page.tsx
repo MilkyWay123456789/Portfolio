@@ -137,7 +137,7 @@ export default function Home() {
         >
           <li className="p-2 bg-gray-800 rounded-lg shadow-md border border-gray-700">✔ ASP.NET Core, Entity Framework, LINQ, T-SQL</li>
           <li className="p-2 bg-gray-800 rounded-lg shadow-md border border-gray-700">✔ Oracle, SQL Server, MySQL</li>
-          <li className="p-2 bg-gray-800 rounded-lg shadow-md border border-gray-700">✔ RESTful API, JWT, SwaggerUI</li>
+          <li className="p-2 bg-gray-800 rounded-lg shadow-md border border-gray-700">✔ RESTful API, JWT, SwaggerUI, WebSocket</li>
           <li className="p-2 bg-gray-800 rounded-lg shadow-md border border-gray-700">✔ C#, VB.NET</li>
         </motion.ul>
       </motion.div>
